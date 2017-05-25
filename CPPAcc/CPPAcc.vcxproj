@@ -12,7 +12,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{1ABDB9C2-FA6E-400C-B714-78FD057EBCB6}</ProjectGuid>
-    <RootNamespace>CPPA_CH0</RootNamespace>
+    <RootNamespace>CPPAcc</RootNamespace>
     <ProjectName>CPPAcc</ProjectName>
     <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
