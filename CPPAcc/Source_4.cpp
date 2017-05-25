@@ -20,6 +20,24 @@ using std::streamsize;
 using std::setprecision;
 
 
+
+struct Student_inifo {
+	string name;
+	double midterm, final;
+	vector<double> homework;
+};  //  ; is required
+
+
+
+istream& read(istream& is, Student_inifo& s)
+{
+	is >> s.name >> s.midterm >> s.final;
+	read_hw(is, s.homework);
+	return is;
+}
+
+
+
 int source_4()
 {
 	cout << "input name:";
