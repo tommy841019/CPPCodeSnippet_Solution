@@ -64,19 +64,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="grade.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="median.cpp" />
     <ClCompile Include="Source_0.cpp" />
     <ClCompile Include="Source_1.cpp" />
     <ClCompile Include="Source_2.cpp" />
     <ClCompile Include="Source_3.cpp" />
     <ClCompile Include="Source_4.cpp" />
+    <ClCompile Include="Student_info.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="grade.h" />
+    <ClInclude Include="median.h" />
     <ClInclude Include="Source_0.h" />
     <ClInclude Include="Source_1.h" />
     <ClInclude Include="Source_2.h" />
     <ClInclude Include="Source_3.h" />
     <ClInclude Include="Source_4.h" />
+    <ClInclude Include="Student_info.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
