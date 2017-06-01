@@ -73,6 +73,7 @@
     <ClCompile Include="Source_3.cpp" />
     <ClCompile Include="Source_4.cpp" />
     <ClCompile Include="Source_5.cpp" />
+    <ClCompile Include="Source_6.cpp" />
     <ClCompile Include="Student_info.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -84,6 +85,7 @@
     <ClInclude Include="Source_3.h" />
     <ClInclude Include="Source_4.h" />
     <ClInclude Include="Source_5.h" />
+    <ClInclude Include="Source_6.h" />
     <ClInclude Include="Student_info.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
