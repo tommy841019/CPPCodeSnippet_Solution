@@ -2,13 +2,23 @@
 #include <cctype>
 #include <string>
 #include <vector>
+#include <exception>
+#include <iostream>
+#include <numeric>
+
 #include "Student_info.h"
+#include "grade.h"
+#include "median.h"
 
 using std::copy;
 using std::isspace;
 using std::string;
 using std::vector;
 using std::find_if;
+using std::domain_error;
+using std::ostream;
+using std::endl;
+using std::accumulate;
 
 
 
@@ -120,9 +130,62 @@ vector<string> find_urls(const string& s)
 
 
 
-bool did_all_homework(const Student_info& s)
+bool did_all_hw(const Student_info& s)
 {
 	return ((find(s.homework.begin(), s.homework.end(), 0))==s.homework.end());
+}
+
+
+
+double grade_aux(const Student_info& s)
+{
+	try
+	{
+		return grade(s);
+	}
+	catch (domain_error)
+	{
+		return grade(s.midterm, s.final, 0);
+	}
+}
+
+
+
+double median_analysis(const vector<Student_info>& students)
+{
+	vector<double> grades;
+	transform(students.begin(), students.end(), back_inserter(grades), grade_aux);  // transform from student begin to end, call grade_aux for each student, append result to grades
+	return median(grades);
+}
+
+
+
+void write_analysis(ostream& out, const string& name, double median_analysis(const vector<Student_info>&), const vector<Student_info>& did, const vector<Student_info>& didnt)
+{
+	out << name << ": median(did) = " << median_analysis(did) << ", median(didnt) = " << median_analysis(didnt) << endl;
+}
+
+
+
+double average(const vector<double>& v)
+{
+	return accumulate(v.begin(), v.end(), 0.0) / v.size();  //  accumulate from v.being to v.end for sum, in <numeric>
+}
+
+
+
+double average_grade(const Student_info& s)
+{
+	return grade(s.midterm, s.final, average(s.homework));
+}
+
+
+
+double average_analysis(const vector<Student_info>& students)
+{
+	vector<double> grades;
+	transform(students.begin(), students.end(), back_inserter(grades), average_grade);
+	return average(grades);
 }
 
 
