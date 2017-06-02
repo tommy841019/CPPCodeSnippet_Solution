@@ -160,9 +160,9 @@ double median_analysis(const vector<Student_info>& students)
 
 
 
-void write_analysis(ostream& out, const string& name, double median_analysis(const vector<Student_info>&), const vector<Student_info>& did, const vector<Student_info>& didnt)
+void write_analysis(ostream& out, const string& name, double analysis(const vector<Student_info>&), const vector<Student_info>& did, const vector<Student_info>& didnt)
 {
-	out << name << ": median(did) = " << median_analysis(did) << ", median(didnt) = " << median_analysis(didnt) << endl;
+	out << name << ": median(did) = " << analysis(did) << ", median(didnt) = " << analysis(didnt) << endl;
 }
 
 
