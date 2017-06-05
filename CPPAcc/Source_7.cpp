@@ -82,18 +82,26 @@ Grammar read_grammer(istream& in)
 
 
 
-vector<string> gen_sentence(const Grammar& g)
+bool bracketed(const string& s)
 {
-	vector<string> ret;
-	gen_aux(g, "<sentence>", ret);
-	return ret;
+	return s.size() > 1 && s[0] == '<' && s[s.size() - 1] == '>';
 }
 
 
 
-bool bracketed(const string& s)
+int nrand(int n)
 {
-	return s.size() > 1 && s[0] == '<' && s[s.size() - 1] == '>';
+	if (n <= 0 || n > RAND_MAX)
+	{
+		throw domain_error("out of range");
+	}
+
+	const int bucket_size = RAND_MAX / n;
+	int r;
+	do { r = rand() / bucket_size; }  // user rand() to generate a number between 0 and RAND_MAX
+	while (r >= n);
+
+	return r;
 }
 
 
@@ -123,19 +131,11 @@ void gen_aux(const Grammar& g, const string& word, vector<string>& ret)
 
 
 
-int nrand(int n)
+vector<string> gen_sentence(const Grammar& g)
 {
-	if (n <= 0 || n > RAND_MAX)
-	{
-		throw domain_error("out of range");
-	}
-
-	const int bucket_size = RAND_MAX / n;
-	int r;
-	do { r = rand() / bucket_size; }  // user rand() to generate a number between 0 and RAND_MAX
-	while (r >= n);
-
-	return r;
+	vector<string> ret;
+	gen_aux(g, "<sentence>", ret);
+	return ret;
 }
 
 
