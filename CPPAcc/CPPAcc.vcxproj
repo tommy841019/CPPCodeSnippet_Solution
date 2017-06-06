@@ -69,6 +69,7 @@
     <ClCompile Include="median.cpp" />
     <ClCompile Include="Source_0.cpp" />
     <ClCompile Include="Source_1.cpp" />
+    <ClCompile Include="Source_10.cpp" />
     <ClCompile Include="Source_2.cpp" />
     <ClCompile Include="Source_3.cpp" />
     <ClCompile Include="Source_4.cpp" />
