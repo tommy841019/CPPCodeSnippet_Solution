@@ -76,6 +76,7 @@
     <ClCompile Include="Source_6.cpp" />
     <ClCompile Include="Source_7.cpp" />
     <ClCompile Include="Source_8.cpp" />
+    <ClCompile Include="Source_9.cpp" />
     <ClCompile Include="Student_info.cpp" />
   </ItemGroup>
   <ItemGroup>
