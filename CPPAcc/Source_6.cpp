@@ -76,7 +76,7 @@ bool not_url_char(char c)
 
 string::const_iterator url_end(string::const_iterator b, string::const_iterator e)
 {
-	return find_if(b,e, not_url_char);  // go through b to e, text if any is not url char
+	return find_if(b,e, not_url_char);  // go through b to e, test if any is not url char
 }
 
 

@@ -56,6 +56,15 @@ private:
 	iterator avail;
 	iterator limit;
 
+	allocator<T> alloc;
+
+	void create();
+	void create(size_type, const T&);
+	void create(const_iterator, const_iterator);
+
+	void uncreate();
+	void grow();
+	void unchecked_append(const T&);
 };
 
 
@@ -70,3 +79,12 @@ Vec<T>& Vec<T>::operator=(const Vec& rhs)
 	}
 	return *this;
 }
+
+
+
+template <class T> void Vec<T>::create() {
+	data = avail = limit = 0;
+}
+
+
+template <class T> void Vec<T>::create(size_type )

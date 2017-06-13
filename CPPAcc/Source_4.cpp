@@ -7,8 +7,8 @@
 #include <exception>
 #include <algorithm>
 #include <string>
-#include <iomanip>  // include system header
-#include "grade.h"  // include user defined header file
+#include <iomanip>  // <> is used to include system header
+#include "grade.h"  // "" is used to include user defined header file
 #include "Student_info.h"
 
 using std::istream;
@@ -115,7 +115,7 @@ int Source_4_AllClass()
 {
 	vector<Student_info> students;
 	Student_info record;
-	string::size_type maxlen = 0;  // has to be string::size_type inorder to work in max(), cannot be int
+	string::size_type maxlen = 0;  // has to be string::size_type inorder to compare with string.size() in max(), cannot be int
 
 	while (read(cin, record))
 	{

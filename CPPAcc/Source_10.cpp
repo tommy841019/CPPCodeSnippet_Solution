@@ -14,6 +14,9 @@ int next(int n)
 typedef int(*pnext)(int n); // define a pointer type of next() 
 pnext get_next_ptr() {};  // this fundtion return a pointer to next()
 
+// Default parameters won’t work for functions called through function pointers
+// Default parameters are resolved at compile-time
+
 
 
 std::string letter_grade(double grade)
