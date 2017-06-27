@@ -82,6 +82,7 @@
     <ClCompile Include="Source_8.cpp" />
     <ClCompile Include="Source_9.cpp" />
     <ClCompile Include="Source_Effective.cpp" />
+    <ClCompile Include="Source_PIE.cpp" />
     <ClCompile Include="Student_info.cpp" />
   </ItemGroup>
   <ItemGroup>
